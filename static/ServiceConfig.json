@@ -1,0 +1,192 @@
+{
+  "service": [
+    {
+      "title": "基础设施",
+      "key": "0-0",
+      "children": [
+        {
+          "title": "城市",
+          "id": "1",
+          "type": "1",
+          "key": "0-1",
+          "url": "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Specialty/ESRI_StatesCitiesRivers_USA/MapServer/0",
+          "outFields": ["areaname", "capital", "class", "objectid", "pop2000", "st"],
+          "columns": [
+            { "name": "areaname", "alias": "名称", "width": 400 },
+            { "name": "capital", "alias": "capital", "width": 120 },
+            { "name": "class", "alias": "类型", "width": 100 },
+            { "name": "objectid", "alias": "id", "width": 100 },
+            { "name": "pop2000", "alias": "人口", "width": 200 },
+            { "field": "st", "alias": "st", "width": 200 }
+          ]
+        },
+        {
+          "title": "河流",
+          "type": "1",
+          "id": "2",
+          "key": "0-2",
+          "url": "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Specialty/ESRI_StatesCitiesRivers_USA/MapServer/1",
+          "outFields": ["FID", "NAME", "SYSTEM"],
+          "columns": [
+            { "name": "FID", "alias": "FID", "width": 300 },
+            { "name": "NAME", "alias": "名称", "width": 300 },
+            { "name": "SYSTEM", "alias": "州", "width": 300 }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "美国地图",
+      "key": "2-0",
+      "children": [
+        {
+          "title": "城市",
+          "id": "7",
+          "type": "1",
+          "key": "2-1",
+          "url": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/0",
+          "outFields": ["areaname", "capital", "class", "objectid", "pop2000", "st"],
+          "columns": [
+            { "name": "areaname", "alias": "名称", "width": 400 },
+            { "name": "capital", "alias": "capital", "width": 120 },
+            { "name": "class", "alias": "类型", "width": 100 },
+            { "name": "objectid", "alias": "id", "width": 100 },
+            { "name": "pop2000", "alias": "人口", "width": 200 },
+            { "name": "st", "alias": "st", "width": 200 }
+          ]
+        },
+        {
+          "title": "州",
+          "id": "9",
+          "type": "1",
+          "key": "2-3",
+          "url": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/2",
+          "outFields": [
+            "state_name",
+            "state_abbr",
+            "sub_region",
+            "st_length",
+            "st_area",
+            "pop2000",
+            "ss6.gdb.States.area"
+          ],
+          "columns": [
+            { "name": "state_name", "alias": "名称", "width": 300 },
+            { "name": "state_abbr", "alias": "简称", "width": 100 },
+            { "name": "sub_region", "alias": "名称", "width": 100 },
+            { "name": "st_length", "alias": "周长", "width": 100 },
+            { "name": "st_area", "alias": "街道面积", "width": 200 },
+            { "name": "pop2000", "alias": "人口", "width": 200 },
+            { "name": "ss6.gdb.States.area", "alias": "总面积", "width": 200 }
+          ]
+        },
+        {
+          "title": "国家",
+          "id": "10",
+          "type": "1",
+          "key": "2-4",
+          "url": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/3",
+          "outFields": ["name", "state_name", "st_length", "st_area", "objectid", "pop2000"],
+          "columns": [
+            { "name": "name", "alias": "名称", "width": 400 },
+            { "name": "state_name", "alias": "州名", "width": 120 },
+            { "name": "st_length", "alias": "周长", "width": 100 },
+            { "name": "objectid", "alias": "id", "width": 100 },
+            { "name": "pop2000", "alias": "人口", "width": 200 },
+            { "field": "st_area", "alias": "面积", "width": 200 }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "热点图",
+      "key": "3-0",
+      "children": [
+        {
+          "title": "美国西岸",
+          "id": "12",
+          "type": "2",
+          "key": "3-1",
+          "url": "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/2012_CA_NHTSA/FeatureServer/0",
+          "outFields": ["OBJECTID", "atmcond", "age", "sex", "alcres"],
+          "columns": [
+            { "name": "OBJECTID", "alias": "序号", "width": 400 },
+            { "name": "age", "alias": "年龄", "width": 120 },
+            { "name": "sex", "alias": "性别", "width": 100 },
+            { "name": "alcres", "alias": "测试结果", "width": 100 },
+            { "name": "atmcond", "alias": "大气状态", "width": 200 }
+          ]
+        },
+        {
+          "title": "全球",
+          "id": "13",
+          "type": "2",
+          "key": "3-3",
+          "url": "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/Earthquakes_Since_1970/FeatureServer/0",
+          "outFields": [
+            "OBJECTID",
+            "Name",
+            "Focal",
+            "Magnitude",
+            "Num_Deaths",
+            "Num_Injured",
+            "Mill_Damages",
+            "Num_Houses_Dest",
+            "Num_Houses_Dam",
+            "Date_",
+            "YYYYMMDD"
+          ],
+          "columns": [
+            { "name": "OBJECTID", "alias": "序号", "width": 300 },
+            { "name": "Name", "alias": "名称", "width": 100 },
+            { "name": "Focal", "alias": "Focal", "width": 100 },
+            { "name": "Magnitude", "alias": "Magnitude", "width": 100 },
+            { "name": "Num_Deaths", "alias": "死亡人事", "width": 200 },
+            { "name": "Num_Injured", "alias": "受害人数", "width": 200 },
+            { "name": "Mill_Damages", "alias": "Mill_Damages", "width": 200 },
+            { "name": "Num_Houses_Dest", "alias": "被毁房屋数量", "width": 100 },
+            { "name": "Num_Houses_Dam", "alias": "受损房屋数量", "width": 200 },
+            { "name": "Date_", "alias": "时间", "width": 200 },
+            { "name": "YYYYMMDD", "alias": "日期", "width": 200 }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "聚类图",
+      "key": "4-0",
+      "children": [
+        {
+          "title": "紧急避让所",
+          "id": "15",
+          "type": "3",
+          "key": "4-1",
+          "url": "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/socal_precincts_points_2008/FeatureServer/0",
+          "outFields": ["*"],
+          "columns": [
+            { "name": "OBJECTID", "alias": "序号", "width": 400 },
+            { "name": "age", "alias": "年龄", "width": 120 },
+            { "name": "sex", "alias": "性别", "width": 100 },
+            { "name": "alcres", "alias": "测试结果", "width": 100 },
+            { "name": "atmcond", "alias": "大气状态", "width": 200 }
+          ]
+        },
+        {
+          "title": "美国西岸2",
+          "id": "16",
+          "type": "3",
+          "key": "4-2",
+          "url": "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/2012_CA_NHTSA/FeatureServer/0",
+          "outFields": ["*"],
+          "columns": [
+            { "name": "OBJECTID", "alias": "序号", "width": 400 },
+            { "name": "age", "alias": "年龄", "width": 120 },
+            { "name": "sex", "alias": "性别", "width": 100 },
+            { "name": "alcres", "alias": "测试结果", "width": 100 },
+            { "name": "atmcond", "alias": "大气状态", "width": 200 }
+          ]
+        }
+      ]
+    }
+  ]
+}

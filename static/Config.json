@@ -1,0 +1,56 @@
+{
+  "logoName": "地图展示系统",
+  "Tool": {
+    "maptool": true,
+    "layerContrllor": true
+  },
+  "layer": {
+    "basemap": ["gray"],
+    "layer": [
+      {
+        "serviceType": "KMLLayer",
+        "url": "http://quickmap.dot.ca.gov/data/lcs.kml",
+        "visible": true,
+        "opacity": 1
+      },
+      {
+        "serviceType": "IntegratedMeshLayer",
+        "url": "https://tiles.arcgis.com/tiles/FQD0rKU8X5sAQfh8/arcgis/rest/services/VRICON_Yosemite_Sample_Integrated_Mesh_scene_layer/SceneServer",
+        "visible": true,
+        "opacity": 1
+      },
+      {
+        "serviceType": "GraphicsLayer",
+        "url": "https://geoeventsample1.esri.com:6443/arcgis/rest/services/LABus/StreamServer",
+        "visible": true,
+        "opacity": 1
+      }
+    ],
+    "topicLayer": [
+      {
+        "name": "交通专题",
+        "serviceType": "wms",
+        "url": "http://quickmap.dot.ca.gov/data/lcs.kml",
+        "visible": false,
+        "opacity": 1
+      },
+      {
+        "name": "人口经济专题",
+        "serviceType": "wms",
+        "url": "http://quickmap.dot.ca.gov/data/lcs.kml",
+        "visible": false,
+        "opacity": 1
+      }
+    ],
+    "translate": [
+      {
+        "english": "name",
+        "china": "名称"
+      },
+      {
+        "english": "type",
+        "china": "类型"
+      }
+    ]
+  }
+}
