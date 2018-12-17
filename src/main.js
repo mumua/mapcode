@@ -5,17 +5,18 @@ import App from './App';
 import router from './router';
 import iview from 'iview';
 import axios from 'axios';
-import VueResource from 'vue-resource';
+// import VueResource from 'vue-resource';
 import qs from 'qs';
 import store from './store';
 import 'iview/dist/styles/iview.css';
+import './assets/icon/iconfont.css';
 
 Vue.use(iview);
 Vue.prototype.$http = axios;
 Vue.prototype.$qs = qs;
 
 Vue.config.productionTip = false;
-Vue.use(VueResource);
+// Vue.use(VueResource);
 
 /* eslint-disable no-new */
 new Vue({

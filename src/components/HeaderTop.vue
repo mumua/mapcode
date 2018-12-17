@@ -90,12 +90,12 @@ export default {
   },
   computed: {
     user () {
-      return {}
-      // return this.$store.state.user
+      // return {}
+      return this.$store.state.user
     },
     isLogin () {
-      return true;
-      // return this.$store.state.isLogin
+      // return true;
+      return this.$store.state.isLogin
     }
   },
   methods: {
@@ -122,7 +122,7 @@ export default {
         // response.status;
         // 响应成功回调
         // alert(response.body.logoName);
-        this.logoname = response.body.logoName;
+        this.logoname = response.data.logoName;
       }, response => {
         // 响应错误回调
         alert('服务器请求失败');

@@ -12,12 +12,36 @@
           "url": "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Specialty/ESRI_StatesCitiesRivers_USA/MapServer/0",
           "outFields": ["areaname", "capital", "class", "objectid", "pop2000", "st"],
           "columns": [
-            { "name": "areaname", "alias": "名称", "width": 400 },
-            { "name": "capital", "alias": "capital", "width": 120 },
-            { "name": "class", "alias": "类型", "width": 100 },
-            { "name": "objectid", "alias": "id", "width": 100 },
-            { "name": "pop2000", "alias": "人口", "width": 200 },
-            { "field": "st", "alias": "st", "width": 200 }
+            {
+              "key": "areaname",
+              "title": "名称",
+              "width": 400
+            },
+            {
+              "key": "capital",
+              "title": "capital",
+              "width": 120
+            },
+            {
+              "key": "class",
+              "title": "类型",
+              "width": 100
+            },
+            {
+              "key": "objectid",
+              "title": "id",
+              "width": 100
+            },
+            {
+              "key": "pop2000",
+              "title": "人口",
+              "width": 200
+            },
+            {
+              "key": "st",
+              "title": "st",
+              "width": 200
+            }
           ]
         },
         {
@@ -28,9 +52,21 @@
           "url": "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Specialty/ESRI_StatesCitiesRivers_USA/MapServer/1",
           "outFields": ["FID", "NAME", "SYSTEM"],
           "columns": [
-            { "name": "FID", "alias": "FID", "width": 300 },
-            { "name": "NAME", "alias": "名称", "width": 300 },
-            { "name": "SYSTEM", "alias": "州", "width": 300 }
+            {
+              "key": "FID",
+              "title": "FID",
+              "width": 300
+            },
+            {
+              "key": "NAME",
+              "title": "名称",
+              "width": 300
+            },
+            {
+              "key": "SYSTEM",
+              "title": "州",
+              "width": 300
+            }
           ]
         }
       ]
@@ -47,12 +83,36 @@
           "url": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/0",
           "outFields": ["areaname", "capital", "class", "objectid", "pop2000", "st"],
           "columns": [
-            { "name": "areaname", "alias": "名称", "width": 400 },
-            { "name": "capital", "alias": "capital", "width": 120 },
-            { "name": "class", "alias": "类型", "width": 100 },
-            { "name": "objectid", "alias": "id", "width": 100 },
-            { "name": "pop2000", "alias": "人口", "width": 200 },
-            { "name": "st", "alias": "st", "width": 200 }
+            {
+              "key": "areaname",
+              "title": "名称",
+              "width": 400
+            },
+            {
+              "key": "capital",
+              "title": "capital",
+              "width": 120
+            },
+            {
+              "key": "class",
+              "title": "类型",
+              "width": 100
+            },
+            {
+              "key": "objectid",
+              "title": "id",
+              "width": 100
+            },
+            {
+              "key": "pop2000",
+              "title": "人口",
+              "width": 200
+            },
+            {
+              "key": "st",
+              "title": "st",
+              "width": 200
+            }
           ]
         },
         {
@@ -71,13 +131,41 @@
             "ss6.gdb.States.area"
           ],
           "columns": [
-            { "name": "state_name", "alias": "名称", "width": 300 },
-            { "name": "state_abbr", "alias": "简称", "width": 100 },
-            { "name": "sub_region", "alias": "名称", "width": 100 },
-            { "name": "st_length", "alias": "周长", "width": 100 },
-            { "name": "st_area", "alias": "街道面积", "width": 200 },
-            { "name": "pop2000", "alias": "人口", "width": 200 },
-            { "name": "ss6.gdb.States.area", "alias": "总面积", "width": 200 }
+            {
+              "key": "state_name",
+              "title": "名称",
+              "width": 300
+            },
+            {
+              "key": "state_abbr",
+              "title": "简称",
+              "width": 100
+            },
+            {
+              "key": "sub_region",
+              "title": "名称",
+              "width": 100
+            },
+            {
+              "key": "st_length",
+              "title": "周长",
+              "width": 100
+            },
+            {
+              "key": "st_area",
+              "title": "街道面积",
+              "width": 200
+            },
+            {
+              "key": "pop2000",
+              "title": "人口",
+              "width": 200
+            },
+            {
+              "key": "ss6.gdb.States.area",
+              "title": "总面积",
+              "width": 200
+            }
           ]
         },
         {
@@ -88,12 +176,36 @@
           "url": "https://sampleserver6.arcgisonline.com/arcgis/rest/services/USA/MapServer/3",
           "outFields": ["name", "state_name", "st_length", "st_area", "objectid", "pop2000"],
           "columns": [
-            { "name": "name", "alias": "名称", "width": 400 },
-            { "name": "state_name", "alias": "州名", "width": 120 },
-            { "name": "st_length", "alias": "周长", "width": 100 },
-            { "name": "objectid", "alias": "id", "width": 100 },
-            { "name": "pop2000", "alias": "人口", "width": 200 },
-            { "field": "st_area", "alias": "面积", "width": 200 }
+            {
+              "key": "name",
+              "title": "名称",
+              "width": 400
+            },
+            {
+              "key": "state_name",
+              "title": "州名",
+              "width": 120
+            },
+            {
+              "key": "st_length",
+              "title": "周长",
+              "width": 100
+            },
+            {
+              "key": "objectid",
+              "title": "id",
+              "width": 100
+            },
+            {
+              "key": "pop2000",
+              "title": "人口",
+              "width": 200
+            },
+            {
+              "key": "st_area",
+              "title": "面积",
+              "width": 200
+            }
           ]
         }
       ]
@@ -110,11 +222,31 @@
           "url": "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/2012_CA_NHTSA/FeatureServer/0",
           "outFields": ["OBJECTID", "atmcond", "age", "sex", "alcres"],
           "columns": [
-            { "name": "OBJECTID", "alias": "序号", "width": 400 },
-            { "name": "age", "alias": "年龄", "width": 120 },
-            { "name": "sex", "alias": "性别", "width": 100 },
-            { "name": "alcres", "alias": "测试结果", "width": 100 },
-            { "name": "atmcond", "alias": "大气状态", "width": 200 }
+            {
+              "key": "OBJECTID",
+              "title": "序号",
+              "width": 400
+            },
+            {
+              "key": "age",
+              "title": "年龄",
+              "width": 120
+            },
+            {
+              "key": "sex",
+              "title": "性别",
+              "width": 100
+            },
+            {
+              "key": "alcres",
+              "title": "测试结果",
+              "width": 100
+            },
+            {
+              "key": "atmcond",
+              "title": "大气状态",
+              "width": 200
+            }
           ]
         },
         {
@@ -137,17 +269,61 @@
             "YYYYMMDD"
           ],
           "columns": [
-            { "name": "OBJECTID", "alias": "序号", "width": 300 },
-            { "name": "Name", "alias": "名称", "width": 100 },
-            { "name": "Focal", "alias": "Focal", "width": 100 },
-            { "name": "Magnitude", "alias": "Magnitude", "width": 100 },
-            { "name": "Num_Deaths", "alias": "死亡人事", "width": 200 },
-            { "name": "Num_Injured", "alias": "受害人数", "width": 200 },
-            { "name": "Mill_Damages", "alias": "Mill_Damages", "width": 200 },
-            { "name": "Num_Houses_Dest", "alias": "被毁房屋数量", "width": 100 },
-            { "name": "Num_Houses_Dam", "alias": "受损房屋数量", "width": 200 },
-            { "name": "Date_", "alias": "时间", "width": 200 },
-            { "name": "YYYYMMDD", "alias": "日期", "width": 200 }
+            {
+              "key": "OBJECTID",
+              "title": "序号",
+              "width": 300
+            },
+            {
+              "key": "Name",
+              "title": "名称",
+              "width": 100
+            },
+            {
+              "key": "Focal",
+              "title": "Focal",
+              "width": 100
+            },
+            {
+              "key": "Magnitude",
+              "title": "Magnitude",
+              "width": 100
+            },
+            {
+              "key": "Num_Deaths",
+              "title": "死亡人事",
+              "width": 200
+            },
+            {
+              "key": "Num_Injured",
+              "title": "受害人数",
+              "width": 200
+            },
+            {
+              "key": "Mill_Damages",
+              "title": "Mill_Damages",
+              "width": 200
+            },
+            {
+              "key": "Num_Houses_Dest",
+              "title": "被毁房屋数量",
+              "width": 100
+            },
+            {
+              "key": "Num_Houses_Dam",
+              "title": "受损房屋数量",
+              "width": 200
+            },
+            {
+              "key": "Date_",
+              "title": "时间",
+              "width": 200
+            },
+            {
+              "key": "YYYYMMDD",
+              "title": "日期",
+              "width": 200
+            }
           ]
         }
       ]
@@ -164,11 +340,31 @@
           "url": "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/socal_precincts_points_2008/FeatureServer/0",
           "outFields": ["*"],
           "columns": [
-            { "name": "OBJECTID", "alias": "序号", "width": 400 },
-            { "name": "age", "alias": "年龄", "width": 120 },
-            { "name": "sex", "alias": "性别", "width": 100 },
-            { "name": "alcres", "alias": "测试结果", "width": 100 },
-            { "name": "atmcond", "alias": "大气状态", "width": 200 }
+            {
+              "name": "OBJECTID",
+              "alias": "序号",
+              "width": 400
+            },
+            {
+              "name": "age",
+              "alias": "年龄",
+              "width": 120
+            },
+            {
+              "name": "sex",
+              "alias": "性别",
+              "width": 100
+            },
+            {
+              "name": "alcres",
+              "alias": "测试结果",
+              "width": 100
+            },
+            {
+              "name": "atmcond",
+              "alias": "大气状态",
+              "width": 200
+            }
           ]
         },
         {
@@ -179,11 +375,31 @@
           "url": "https://services.arcgis.com/V6ZHFr6zdgNZuVG0/arcgis/rest/services/2012_CA_NHTSA/FeatureServer/0",
           "outFields": ["*"],
           "columns": [
-            { "name": "OBJECTID", "alias": "序号", "width": 400 },
-            { "name": "age", "alias": "年龄", "width": 120 },
-            { "name": "sex", "alias": "性别", "width": 100 },
-            { "name": "alcres", "alias": "测试结果", "width": 100 },
-            { "name": "atmcond", "alias": "大气状态", "width": 200 }
+            {
+              "name": "OBJECTID",
+              "alias": "序号",
+              "width": 400
+            },
+            {
+              "name": "age",
+              "alias": "年龄",
+              "width": 120
+            },
+            {
+              "name": "sex",
+              "alias": "性别",
+              "width": 100
+            },
+            {
+              "name": "alcres",
+              "alias": "测试结果",
+              "width": 100
+            },
+            {
+              "name": "atmcond",
+              "alias": "大气状态",
+              "width": 200
+            }
           ]
         }
       ]

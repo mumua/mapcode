@@ -1,12 +1,6 @@
 <template>
     <div class="map-model">
-      <!-- <div>
-        <div v-if="maptool.base==true">
-          底图内容
-        </div>
-        <div v-if="maptool.topic==true">专题图内容</div>
-        <div v-if="maptool.feature==true">属性查询内容</div>
-      </div> -->
+
       <div class="tool-nev">
         <ul>
           <li @click="maptoolOpen(1)" v-bind:class="{ toolIndex:maptool.state==1}">
@@ -33,6 +27,12 @@
             </span>
             空间查询
           </li>
+          <li @click="maptoolOpen(9)" v-bind:class="{ toolIndex:maptool.state==9}">
+            <span>
+              <img src="static/images/space.png" alt="" style="width:18px">
+            </span>
+            缓冲查询
+          </li>
         </ul>
         <div class="tool-cont">
           <div v-show="maptool.state==1">
@@ -57,15 +57,15 @@
           </div>
           <div v-show="maptool.state==4">
                 <div class="space_query" >
-                  <button data-dojo-type="dijit/form/Button" value="Point">
+                  <!-- <button data-dojo-type="dijit/form/Button" value="Point">
                     <img src=" static/images/point.png" alt="">
 
-                  <!-- <span>Click Me!</span> -->
+                  <span>Click Me!</span>
 
-                  </button>
+                  </button> -->
                   <!-- <input type="text" data-dojo-type="dijit/form/Input" value="Point"> -->
                   <!-- <img src="../../../static/images/point.png" data-dojo-type="dijit/form/Button" alt="点"> -->
-                  <button data-dojo-type="dijit/form/Button" value="MultiPoint">
+                  <!-- <button data-dojo-type="dijit/form/Button" value="MultiPoint">
                     <img src=" static/images/multipoint.png" alt="">
                   </button>
                   <button data-dojo-type="dijit/form/Button" value="Line">
@@ -76,17 +76,52 @@
                   </button>
                   <button data-dojo-type="dijit/form/Button" value="Polygon">
                     <img src=" static/images/polygon.png" alt="">
-                  </button>
+                  </button> -->
                   <!-- <button data-dojo-type="dijit/form/Button">Freehand Polyline</button>
                   <button data-dojo-type="dijit/form/Button">Freehand Polygon</button>
 
                   <button data-dojo-type="dijit/form/Button">Arrow</button>
                   <button data-dojo-type="dijit/form/Button">Triangle</button> -->
-                  <button data-dojo-type="dijit/form/Button" value="Circle">
+                  <!-- <button data-dojo-type="dijit/form/Button" value="Circle">
                     <img src=" static/images/multipoint.png" alt="">
-                  </button>
+                  </button> -->
+                  <button class="act-btn" id="polygonButton" type="button" data-dojo-type="dijit/form/Button"
+                          title="多边形" value="Polygon" >
+                      <span class=" action-button esri-icon-polygon"></span>
+                    </button>
+                    <button  id="rectangleButton" data-dojo-type="dijit/form/Button"
+                      type="button" title="矩形" value="rectangle">
+                        <span class="action-button esri-icon-checkbox-unchecked"></span>
+                    </button>
+                    <button  id="circleButton" data-dojo-type="dijit/form/Button"
+                      type="button" title="圆" value="Circle">
+                        <span class="action-button esri-icon-radio-unchecked"></span>
+                    </button>
+                    <!-- <button  type="button" data-dojo-type="dijit/form/Button"
+                        @click="clearDrawKJ">
+                      <span class="action-button esri-icon-trash"></span>
+                    </button> -->
+                    <button @click="clearDrawKJ" style="height: 28px;vertical-align: middle">
+                      <span class="action-button esri-icon-trash"></span>
+                    </button>
                   <!-- <button data-dojo-type="dijit/form/Button">Ellipse</button> -->
                 </div>
+          </div>
+          <div v-show="maptool.state==9">
+              <Form   :label-width="80"  >
+                  <!-- <FormItem label="缓冲半径" prop="gender">
+                                <Input  placeholder="输入最小数" />
+
+                  </FormItem> -->
+                  <FormItem label="" style="  margin-bottom: 5px;">
+                      <div id="topbar" class="space_query" >
+                        <button class="act-btn" id="point" type="button" data-dojo-type="dijit/form/Button"
+                          title="缓冲点" value="point" style="padding:0">
+                          <span class=" action-button " style="display:inline-block;width:20px;height:20px">.</span>
+                        </button>
+                      </div>
+                  </FormItem>
+                </Form>
           </div>
         </div>
       </div>
@@ -118,6 +153,9 @@ export default {
   computed: {
     map () {
       return this.$store.state.map;
+    },
+    isShow () {
+      return this.$store.state.isShow;
     }
   },
   methods: {
@@ -198,13 +236,16 @@ export default {
       } else {
         this.maptool.state = state;
       }
+    },
+    clearDrawKJ: function () {
+      Window.clearKJ()
     }
   },
   mounted: function () {
     // this.getlayer();
     this.$http.get('static/ServiceConfig.json').then(res => {
-      for (let i = 0; i < res.body.service.length; i++) {
-        this.data4.push(res.body.service[i]);
+      for (let i = 0; i < res.data.service.length; i++) {
+        this.data4.push(res.data.service[i]);
       }
 
       console.log('json数据为:' + res.body)// 此处的res对象包含了json的文件信息和数据，我们需要的json数据存在于body属性中
